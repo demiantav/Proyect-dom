@@ -6,7 +6,9 @@ let menuOpen = false;
 
 document.addEventListener("click", (evento) => {
 
-  if(evento.target.matches(".hamb") || evento.target.matches(".linea") ){
+  if(evento.target.matches(".hamb") || evento.target.matches(".linea")
+    || evento.target.matches(".linea2") || evento.target.matches(".linea3")){
+      
     if(!menuOpen){
       $menu.classList.add("open");
       $hamb.classList.add("open-hamb");
