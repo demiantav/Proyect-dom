@@ -1,9 +1,9 @@
 export default function hamburguesa (menu,hamb,item){
   
   const d= document,
-      $hamb = d.querySelector(hamb),
-      $menu = d.querySelector(menu),
-      $item = d.querySelector(item);
+        $hamb = d.querySelector(hamb),
+        $menu = d.querySelector(menu),
+        $item = d.querySelector(item);
 
 
   d.addEventListener("click", (evento) =>{
