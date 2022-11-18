@@ -12,6 +12,8 @@
     font-size: 1.1em;
     transform:translateY(8px);
     font-family: 'PT Sans', sans-serif;
+    z-index: -10;
+
   }
 
 .header{
@@ -32,14 +34,28 @@ ul{
   display:flex;
   list-style: none;
   flex-direction: column;
-  ;
+  background-color: rgb(22, 16, 50);
+  height: 100%;
+  justify-content: center;
 
 }
 
-ul > li{
 
-  padding: 30px;
+li{
+
+  padding: 10px;
+  margin-top: 1rem;
+
+
 }
+
+li:hover {
+
+  background-color: rgb(206, 83, 116);
+  color: rgb(22, 16, 50);
+}
+
+
 
 a{
   text-decoration: none;
@@ -51,10 +67,7 @@ a{
 
 .menu{
 
-  background-color: rgb(22, 16, 50);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   height:100%;
   width:100%;
   position:fixed;
@@ -62,6 +75,7 @@ a{
   left: 0;
   transition: all .45s;
   z-index: -10;
+
 
 
 }
