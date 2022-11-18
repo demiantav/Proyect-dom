@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html{
+
+  scroll-behavior: smooth;
+}
+
   .titulo{
 
     color: white;
@@ -29,6 +34,18 @@
 
 }
 
+.menu{
+  
+  height:100%;
+  width:100%;
+  position:fixed;
+  top: -100%;
+  left: 0;
+  transition: all .45s;
+  z-index: -10;
+
+}
+
 ul{
 
   display:flex;
@@ -43,41 +60,34 @@ ul{
 
 li{
 
-  padding: 10px;
-  margin-top: 1rem;
+  
+  overflow: hidden;
 
 
 }
 
+
 li:hover {
 
   background-color: rgb(206, 83, 116);
-  color: rgb(22, 16, 50);
+  
+}
+
+li:hover > a {
+
+  color:rgb(22, 16, 50);
 }
 
 
 
 a{
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: white;
-
-}
-
-
-.menu{
-
-
-  height:100%;
-  width:100%;
-  position:fixed;
-  top: -100%;
-  left: 0;
-  transition: all .45s;
-  z-index: -10;
-
-
-
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: .3rem;
+ 
 }
 
 .open{
