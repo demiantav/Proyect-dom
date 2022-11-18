@@ -178,7 +178,9 @@ img{
   place-items: center;
   background-color: rgb(206, 83, 116);
   color: rgb(22, 16, 50);
-  font-size: 2rem;
+  font-size: clamp(13px,3vw,32px);
   border-bottom: 1px solid rgb(22, 16, 50);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
   border-width: 2px;
 }
