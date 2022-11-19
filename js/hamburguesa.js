@@ -13,6 +13,7 @@ export default function hamburguesa (menu,hamb,item){
      $menu.classList.toggle("open");
      $hamb.classList.toggle("open-hamb");
      
+     
    }
 
    if(evento.target.matches(item)){
