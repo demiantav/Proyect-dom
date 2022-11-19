@@ -200,13 +200,14 @@ img{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10rem;
+  padding: 5rem;
   
 }
 
 .hora{
 
   opacity: 0;
+  
   
 }
 
