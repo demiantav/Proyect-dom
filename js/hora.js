@@ -1,7 +1,10 @@
 export default function setHora (boton,hora){
 
     const d = document,
-          $hora = d.querySelector(hora);
+          $hora = d.querySelector(hora),
+          audio = new Audio("./assest/Silva-Beija-Eu.mp3");
+
+          
 
     
 
@@ -31,6 +34,7 @@ export default function setHora (boton,hora){
             
             $hora.classList.toggle("active-hora");
             calculateHour();
+            audio.play();
 
             
             
