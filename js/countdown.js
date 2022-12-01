@@ -1,13 +1,13 @@
 export function setContdown(count){
 
     const d = document,
-          $count = d.querySelector(count),
-          actualDate= new Date().getTime(),
-          futureDate= new Date("Jan 13, 2023, 00:00:00").getTime();
+          $count = d.querySelector(count);
 
         function calculateContdown(){
             
-            let distance = futureDate - actualDate;
+            let actualDate= new Date().getTime(),
+                futureDate= new Date("Jan 14, 2023, 00:00:00").getTime(),
+                distance = futureDate - actualDate;
 
                let days = Math.floor(distance / (1000 * 60 * 60 * 24)),
                    hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
@@ -18,7 +18,7 @@ export function setContdown(count){
                    if(minutes < 10) minutes = "0" + minutes;
                    if(seconds < 10) seconds = "0" + seconds;
 
-             $count.textContent = `${days} dias, ${hours} horas ${minutes} minutos ${seconds} segundos para ver a mi amorcito`;
+             $count.textContent= `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos para ver a mi amorcito`;
 
                
 
