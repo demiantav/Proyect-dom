@@ -184,10 +184,10 @@ img{
   font-weight: bold;
   border-width: 2px;
   text-align: center;
-  position: relative;
+  
 }
 
-.container-hora{
+.container-hora, .container-fecha{
   
   border: 1px solid black;
   padding: 1rem;
