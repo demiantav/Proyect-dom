@@ -205,14 +205,19 @@ img{
   
 }
 
+.secciones:nth-child(8){
+
+  background-color: hsl(0, 86%, 43%);
+  color:#d60d5a;
+  
+  
+}
+
 .secciones:nth-child(9){
 
-  background-color: #eeb414;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 5rem;
+  background-color: #000000;
+  color:#d60d5a;
+  
   
 }
 

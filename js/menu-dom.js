@@ -11,7 +11,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
 
     hamburguesa(".menu",".hamb",".seccion");
     setHora(".boton-hora",".hora");
-    setContdown(".count");
+    setContdown(".count","Jan 14, 2023, 00:00:00");
     
    
     

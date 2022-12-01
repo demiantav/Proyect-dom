@@ -1,4 +1,4 @@
-export function setContdown(count){
+export function setContdown(count,fecha){
 
     const d = document,
           $count = d.querySelector(count);
@@ -6,7 +6,7 @@ export function setContdown(count){
         function calculateContdown(){
             
             let actualDate= new Date().getTime(),
-                futureDate= new Date("Jan 14, 2023, 00:00:00").getTime(),
+                futureDate= new Date(fecha).getTime(),
                 distance = futureDate - actualDate;
 
                let days = Math.floor(distance / (1000 * 60 * 60 * 24)),
