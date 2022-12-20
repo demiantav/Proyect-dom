@@ -10,6 +10,13 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+
+  
+  display: flex;
+  flex-direction: column;
+}
+
   .titulo{
 
     color: white;
@@ -82,7 +89,7 @@ li:hover > a {
 
 a{
   text-decoration: none;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: white;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -168,6 +175,7 @@ img{
 .menu ul:first-child{
 
   text-align: center;
+  
 }
 
 
@@ -232,8 +240,6 @@ img{
   
   opacity: 1;
   
-  
-
 }
 
 .boton-hora{
@@ -265,5 +271,43 @@ img{
   background-color: black;
   
 }
+
+.button-scroll{
+
+ background-color: hsl(333, 79%, 37%);
+ position: fixed;
+ border-radius: 50%;
+ color: #eef5f5;
+ bottom: 0;
+ align-self: center;
+ margin-bottom: 2rem;
+ padding: 1rem;
+ border-style: none;
+ transition: all .2s ease-in-out;
+ 
+ 
+}
+
+
+
+
+
+.active{
+
+  display:none;
+
+}
+
+.button-scroll:hover{
+
+  cursor: pointer;
+  background-color: hwb(342 4% 10% / 0.89);
+  
+
+}
+
+
+
+
 
 
