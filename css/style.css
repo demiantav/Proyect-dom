@@ -284,6 +284,7 @@ img{
  padding: 1rem;
  border-style: none;
  transition: all .2s ease-in-out;
+ opacity: 0;
  
  
 }
