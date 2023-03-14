@@ -6,7 +6,7 @@ export default function hamburguesa (menu,hamb,item){
         $item = d.querySelector(item);
 
 
-  d.addEventListener("click", (evento) =>{
+  d.addEventListener("click", (evento) => {
 
    if(evento.target.matches(`${hamb} *`) || evento.target.matches(hamb)){
 

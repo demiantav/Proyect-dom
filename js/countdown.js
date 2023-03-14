@@ -18,7 +18,7 @@ export function setContdown(count,fecha){
                    if(minutes < 10) minutes = "0" + minutes;
                    if(seconds < 10) seconds = "0" + seconds;
 
-             $count.textContent= `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos para ver a mi amorcito`;
+             $count.textContent= `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos para casarme con mi pata sucia`;
 
                
 

@@ -106,8 +106,8 @@ a{
 
 
   z-index: 1;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.2em;
+  height: 2.2em;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -193,6 +193,12 @@ img{
   border-width: 2px;
   text-align: center;
   
+}
+
+.darkMode{
+  background-color: rgb(204, 197, 199);
+  color: #830b55;
+
 }
 
 .container-hora, .container-fecha{
@@ -288,6 +294,20 @@ img{
  
  
 }
+
+.button-dark{
+
+  width: 3em;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  
+  
+}
+
+
 
 
 

@@ -3,6 +3,7 @@ import setHora from "./hora.js";
 import { shortcuts, moveBall } from "./teclado.js";
 import { setContdown } from "./countdown.js";
 import { showButton, toTop } from "./scroll-button.js";
+import { setDarkMode } from "./button_darkMode.js";
 
 const d= document;
 
@@ -12,8 +13,9 @@ d.addEventListener("DOMContentLoaded",(e)=>{
 
     hamburguesa(".menu",".hamb",".seccion");
     setHora(".boton-hora",".hora");
-    setContdown(".count","Jan 14, 2023, 00:00:00");
+    setContdown(".count","April 28, 2023, 08:15:00");
     toTop(e,".button-scroll");
+    setDarkMode(".button-dark", "darkMode");
     
    
     
