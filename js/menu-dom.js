@@ -13,9 +13,9 @@ d.addEventListener("DOMContentLoaded",(e)=>{
 
     hamburguesa(".menu",".hamb",".seccion");
     setHora(".boton-hora",".hora");
-    setContdown(".count","April 28, 2023, 08:15:00");
+    setContdown(".count","June 16, 2023, 12:00:00");
     toTop(e,".button-scroll");
-    setDarkMode(".button-dark", "darkMode");
+    
     
    
     
@@ -32,6 +32,8 @@ d.addEventListener("scroll",(e)=>{
     showButton(e,".button-scroll");
 
 })
+
+setDarkMode(".button-dark", "darkMode");
 
 
 

@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+      ls= localStorage;
 
 export function setDarkMode(btn,darkClass){
 
@@ -7,6 +8,26 @@ export function setDarkMode(btn,darkClass){
 
     let flag = true;
 
+    const lightFunction = () => {
+
+        $btn_dark.textContent = "🌙";
+            $elements.forEach((value) => value.classList.toggle(darkClass));
+            flag= false;
+            ls.setItem("theme","light");
+
+
+    } 
+
+    const darkFunction = () => {
+
+        $btn_dark.textContent="☀️";
+        $elements.forEach((value) => value.classList.toggle(darkClass));
+            flag= true;
+            ls.setItem("theme","dark");
+
+
+    }
+
     
 d.addEventListener("click", (e) => {
 
@@ -14,22 +35,14 @@ d.addEventListener("click", (e) => {
 
     if(e.target.matches(btn)){
 
-        console.log(flag);
-        console.log(localStorage);
-        
         if(flag){
 
-            $btn_dark.textContent = "☀️";
-            $elements.forEach((value) => value.classList.toggle(darkClass));
-            flag= false;
+            lightFunction();
 
 
         }else{
 
-            $btn_dark.textContent="🌙";
-            $elements.forEach((value) => value.classList.toggle(darkClass));
-            flag= true;
-
+            darkFunction();
               
 
         }
@@ -38,6 +51,17 @@ d.addEventListener("click", (e) => {
     };
 
     
+})
+
+d.addEventListener("DOMContentLoaded", () => {
+
+    if(ls.getItem("theme") === null) ls.setItem("theme","light");
+
+    if(ls.getItem("theme") === "light") lightFunction();
+
+    if(ls.getItem("theme") === "dark") darkFunction();
+
+
 })
 
 }
