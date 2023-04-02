@@ -11,12 +11,12 @@ export function setDarkMode(btn,darkClass){
     const lightFunction = () => {
 
         $btn_dark.textContent = "🌙";
-            $elements.forEach((value) => value.classList.toggle(darkClass));
+            $elements.forEach((value) => value.classList.remove(darkClass));
             flag= false;
             ls.setItem("theme","light");
 
 
-    } 
+    }
 
     const darkFunction = () => {
 
@@ -28,10 +28,10 @@ export function setDarkMode(btn,darkClass){
 
     }
 
-    
+
 d.addEventListener("click", (e) => {
 
-    
+
 
     if(e.target.matches(btn)){
 
@@ -43,25 +43,27 @@ d.addEventListener("click", (e) => {
         }else{
 
             darkFunction();
-              
+
 
         }
 
 
     };
 
-    
+
 })
 
 d.addEventListener("DOMContentLoaded", () => {
 
     if(ls.getItem("theme") === null) ls.setItem("theme","light");
 
-    if(ls.getItem("theme") === "light") lightFunction();
+    if(ls.getItem("theme") === "light") lightFunction(); 
 
-    if(ls.getItem("theme") === "dark") darkFunction();
+    if(ls.getItem("theme") === "dark")  darkFunction();
 
 
 })
+
+
 
 }
