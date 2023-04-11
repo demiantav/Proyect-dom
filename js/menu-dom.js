@@ -4,6 +4,7 @@ import { shortcuts, moveBall } from "./teclado.js";
 import { setContdown } from "./countdown.js";
 import { showButton, toTop } from "./scroll-button.js";
 import { setDarkMode } from "./button_darkMode.js";
+import { testResponsive } from "./responsive-tester.js";
 
 const d= document;
 
@@ -15,12 +16,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     setHora(".boton-hora",".hora");
     setContdown(".count","June 16, 2023, 12:00:00");
     toTop(e,".button-scroll");
+    testResponsive(".btn_test",".btn_close",".url_test",".width_test",".height_test");
     
-    
-   
-    
-
-
 })
 
 d.addEventListener("keydown", (e) =>{
