@@ -9,9 +9,9 @@ export function testResponsive(btn_test,btn_close,url,width,height){
     
     let openPage;
 
-        
 
-    
+      
+
     d.addEventListener("click", (e) => {
 
         if(e.target.matches(btn_test)){

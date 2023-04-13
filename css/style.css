@@ -234,6 +234,14 @@ img{
   
 }
 
+.secciones:nth-child(11){
+
+  background-color: #e0d780;
+  color:#570625;
+  
+  
+}
+
 .hora{
 
   opacity: 0;
