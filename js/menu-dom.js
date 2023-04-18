@@ -6,6 +6,7 @@ import { showButton, toTop } from "./scroll-button.js";
 import { setDarkMode } from "./button_darkMode.js";
 import { testResponsive } from "./responsive-tester.js";
 import { testInternet } from "./internet_test.js";
+import getVideo from "./webcam_detection.js";
 
 const d= document;
 
@@ -19,6 +20,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     toTop(e,".button-scroll");
     testResponsive(".btn_test",".btn_close",".url_test",".width_test",".height_test");
     testInternet(".test");
+    getVideo(".web-video");
     
 })
 
