@@ -22,6 +22,7 @@ export default function getVideo(video){
     
 
     if(n.mediaDevices.getUserMedia) webCam();
+    console.log(n.geolocation.getCurrentPosition(GeolocationCoordinates));
     
 
 }
