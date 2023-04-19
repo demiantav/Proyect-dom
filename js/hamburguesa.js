@@ -12,6 +12,7 @@ export default function hamburguesa (menu,hamb,item){
 
      $menu.classList.toggle("open");
      $hamb.classList.toggle("open-hamb");
+     d.querySelector(".button-scroll").style.display="none";
      
      
    }
@@ -20,6 +21,8 @@ export default function hamburguesa (menu,hamb,item){
 
      $menu.classList.remove("open");
      $hamb.classList.remove("open-hamb");
+     d.querySelector(".button-scroll").style.display="block";
+     
 
    }
 

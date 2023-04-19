@@ -50,6 +50,8 @@ body{
   left: 0;
   transition: all .45s;
   z-index: -10;
+  overflow-y: auto;
+ 
 
 }
 
@@ -61,16 +63,10 @@ ul{
   background-color: rgb(22, 16, 50);
   height: 100%;
   justify-content: center;
-
-}
-
-
-li{
   
-  overflow: hidden;
-
 
 }
+
 
 
 li:hover {
@@ -92,7 +88,7 @@ a{
   color: white;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: .3rem;
+  
  
 }
 
@@ -234,10 +230,28 @@ img{
   
 }
 
+
+
 .secciones:nth-child(11){
 
   background-color: #e0d780;
+  color:#10041fd2;
+  
+  
+}
+
+.secciones:nth-child(12){
+
+  background-color: #1f8ece;
   color:#570625;
+  
+  
+}
+
+.secciones:nth-child(13){
+
+  background-color: #021852;
+  color:#e2d8dc;
   
   
 }
@@ -298,6 +312,7 @@ img{
  border-style: none;
  transition: all .2s ease-in-out;
  opacity: 0;
+ 
  
  
 }
@@ -401,6 +416,15 @@ form div{
 .web-video{
 
   width: 100%;
+}
+
+
+/**** Geolocalization ****/
+
+.latitud, .longitud, .precision, .secciones div a{
+
+  font-size: .6em;
+  font-weight:100;
 }
 
 

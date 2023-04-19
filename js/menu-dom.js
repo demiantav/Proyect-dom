@@ -7,6 +7,7 @@ import { setDarkMode } from "./button_darkMode.js";
 import { testResponsive } from "./responsive-tester.js";
 import { testInternet } from "./internet_test.js";
 import getVideo from "./webcam_detection.js";
+import { getLocalization } from "./geolocalization.js";
 
 const d= document;
 
@@ -21,7 +22,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     testResponsive(".btn_test",".btn_close",".url_test",".width_test",".height_test");
     testInternet(".test");
     getVideo(".web-video");
-    
+    getLocalization(".latitud",".longitud",".precision");    
 })
 
 d.addEventListener("keydown", (e) =>{
