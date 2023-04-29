@@ -5,7 +5,14 @@ export function getLocalization(latitud,longitud,precision){
           g= n.geolocation,
           $latitud=d.querySelector(latitud),
           $longitud=d.querySelector(longitud),
-          $precision=d.querySelector(precision);
+          $precision=d.querySelector(precision),
+          options = {
+
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0,
+
+          };
 
           const success = (pos)=>{
 
@@ -19,16 +26,13 @@ export function getLocalization(latitud,longitud,precision){
             $precision.textContent= `Precision: ${prec}`;
 
             const l = d.createElement("a");
-            l.href= `https://www.google.com/maps/@${$latitud},${longitud}`;
+            l.href= `https://www.google.com/maps/@${$latitud},${longitud},20z`;
             l.text="Ver en Google Maps";
             l.target= "_blank";
 
-        $precision.insertAdjacentElement("afterend", l);
-
+             $precision.insertAdjacentElement("afterend", l);
             
-
-            
-         }
+            }
 
          const error = (err)=>{
 
@@ -37,7 +41,7 @@ export function getLocalization(latitud,longitud,precision){
          }
 
 
-        g.getCurrentPosition(success,error);
+        g.getCurrentPosition(success,error,options);
 
         
 

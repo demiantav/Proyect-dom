@@ -17,8 +17,7 @@ export function moveBall(bola,seccion,e){
           $limitsSection = $seccion.getBoundingClientRect();
       
 
-          console.log($limitsBall);
-          console.log($limitsSection);
+          
     
 
     switch(e.keyCode){

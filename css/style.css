@@ -38,6 +38,7 @@ body{
   color: rgb(7, 2, 13);
   top:0;
   padding: .5em;
+  z-index: 1;
 
 }
 
@@ -244,6 +245,7 @@ img{
 
   background-color: #1f8ece;
   color:#570625;
+  font-size: clamp(16px,4vw,50px);
   
   
 }
@@ -252,6 +254,16 @@ img{
 
   background-color: #021852;
   color:#e2d8dc;
+  
+  
+}
+
+.secciones:nth-child(14){
+
+  background-color: hwb(24 4% 15%);
+  color:#e2d8dc;
+  padding: 1em;
+  height: max-content;
   
   
 }
@@ -425,6 +437,90 @@ form div{
 
   font-size: .6em;
   font-weight:100;
+}
+
+
+/***** Cards Filter *****/
+
+.box-cards{
+
+  display: flex;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+  
+}
+
+.input-filter{
+
+  padding: .5em;
+  
+}
+
+.card{
+
+  width: 220px;
+  height: clamp(100px,50vw,350px);
+  background-color: red;
+  position: relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+  cursor: pointer;
+  
+}
+
+.card:nth-child(1){
+
+  
+  background-image: url(/assest/programacion.jpg);
+ 
+}
+
+.card:nth-child(2){
+
+  
+  background-image: url(/assest/moda.jpg);
+ 
+}
+
+.card:nth-child(3){
+
+  
+  background-image: url(/assest/diseño.jpg);
+ 
+}
+
+.card:nth-child(4){
+
+  
+  background-image: url(/assest/maquillaje.jpg);
+ 
+}
+
+.card:nth-child(5){
+
+  
+  background-image: url(/assest/cabello.jpg);
+ 
+}
+
+.card-title{
+
+  background-color: #00000086;
+  padding: .3em;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: clamp(14px,4vw,20px);
+  
+ 
+}
+
+.filter{
+
+  display: none;
 }
 
 
