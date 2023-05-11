@@ -14,34 +14,34 @@ export function getLocalization(latitud,longitud,precision){
 
           };
 
-          const success = (pos)=>{
+    const success = (pos)=>{
 
-            const coordenadas = pos.coords,
-                  lat= coordenadas.latitude,
-                  long= coordenadas.longitude,
-                  prec= coordenadas.accuracy;
+        const coordenadas = pos.coords,
+              lat= coordenadas.latitude,
+              long= coordenadas.longitude,
+              prec= coordenadas.accuracy;
 
-            $latitud.textContent= `Latitud: ${lat}`;
-            $longitud.textContent= `Longitud: ${long}`;
-            $precision.textContent= `Precision: ${prec}`;
+              $latitud.textContent= `Latitud: ${lat}`;
+              $longitud.textContent= `Longitud: ${long}`;
+              $precision.textContent= `Precision: ${prec}`;
 
-            const l = d.createElement("a");
-            l.href= `https://www.google.com/maps/@${$latitud},${longitud},20z`;
-            l.text="Ver en Google Maps";
-            l.target= "_blank";
+        const l = d.createElement("a");
+              l.href= `https://www.google.com/maps/@${$latitud},${longitud},20z`;
+              l.text="Ver en Google Maps";
+              l.target= "_blank";
 
-             $precision.insertAdjacentElement("afterend", l);
+              $precision.insertAdjacentElement("afterend", l);
             
-            }
+    }
 
-         const error = (err)=>{
+    const error = (err)=>{
 
-            console.log(err);
+        console.log(err);
 
-         }
+    }
 
 
-        g.getCurrentPosition(success,error,options);
+    g.getCurrentPosition(success,error,options);
 
         
 

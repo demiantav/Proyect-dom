@@ -56,7 +56,7 @@ body{
 
 }
 
-ul{
+ul:not(.sorteo){
 
   display:flex;
   list-style: none;
@@ -70,7 +70,7 @@ ul{
 
 
 
-li:hover {
+li:hover:not(.sorteo li) {
 
   background-color: rgb(206, 83, 116);
   
@@ -268,6 +268,11 @@ img{
   
 }
 
+.secciones:nth-child(15){
+
+  background-color:#16d37b;
+}
+
 .hora{
 
   opacity: 0;
@@ -383,7 +388,7 @@ img{
 
 }
 
-.btn_test, .btn_close{
+.btn_test, .btn_close, .btn-start{
 
   padding: .3em;
   width: 8em;
@@ -521,7 +526,21 @@ form div{
 .filter{
 
   display: none;
+  
 }
+
+
+/*****Sorteo Digital******/
+
+.sorteo{
+
+  font-size: .8em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+}
+
+
 
 
 

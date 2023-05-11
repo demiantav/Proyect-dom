@@ -9,8 +9,9 @@ import { testInternet } from "./internet_test.js";
 import getVideo from "./webcam_detection.js";
 import { getLocalization } from "./geolocalization.js";
 import filterImages from "./filter.js";
+import elegirGanador from "./sorteo.js";
 
-const d= document;
+const d = document;
 
 
 
@@ -24,7 +25,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     testInternet(".test");
     getVideo(".web-video");
     getLocalization(".latitud",".longitud",".precision");
-    filterImages(".input-filter",e);    
+    filterImages(".input-filter",e);  
+    elegirGanador(".btn-start");  
 })
 
 d.addEventListener("keydown", (e) =>{

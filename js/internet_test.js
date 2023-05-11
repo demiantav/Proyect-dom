@@ -10,6 +10,7 @@ export function testInternet(p){
         $test.textContent= "Estamos Online";
         $test.style.color= "green";
     })
+    
     window.addEventListener('offline', () =>{
 
         $test.textContent= "Estamos Offline";
