@@ -83,7 +83,7 @@ li:hover > a {
 
 
 
-a{
+a:not(.slider-container a){
   text-decoration: none;
   font-size: 2.5rem;
   color: white;
@@ -114,13 +114,7 @@ a{
 
 }
 
-img{
 
-  filter: brightness(0) invert(1);
-  width: 20px;
-  transform: translateX(85px);
-
-}
 
 .linea, .linea2, .linea3{
 
@@ -271,6 +265,17 @@ img{
 .secciones:nth-child(15){
 
   background-color:#16d37b;
+  
+}
+
+.secciones:nth-child(16){
+
+  background-color:hsl(342, 81%, 46%);
+  
+  
+  
+  
+  
 }
 
 .hora{
@@ -539,6 +544,56 @@ form div{
   margin-bottom: 1em;
 
 }
+
+/****Slider Container****/
+
+.slider-container{
+
+  position: relative;
+  width: clamp(22rem, 9.6761rem + 52.5822vw, 40rem);
+  height: 400px;
+  margin-top: .5em;
+  
+}
+
+
+
+.slider{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s ease;
+  
+  
+  
+ 
+}
+
+.slider img{
+
+  width: 100%;
+  
+}
+
+.slider.active-sld{
+
+  opacity: 1;
+
+}
+
+.slider-btns a{
+
+  bottom: 0;
+  position: absolute;
+  color: #e2d8dc;
+  width: 5rem;
+}
+
+
+
+
+
+
+
 
 
 

@@ -8,10 +8,9 @@ export default function elegirGanador(btn){
 
         if(e.target.matches(btn)){
             
-            let array= Array.from($opciones);
             const ganador = $opciones[Math.floor(Math.random() * $opciones.length)];
 
-            alert(`El ganador es ${ganador.textContent}`)
+            alert(`El ganador es ${ganador.textContent}`);
 
 
         }
