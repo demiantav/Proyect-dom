@@ -10,6 +10,7 @@ import getVideo from "./webcam_detection.js";
 import { getLocalization } from "./geolocalization.js";
 import filterImages from "./filter.js";
 import elegirGanador from "./sorteo.js";
+import setSlider from "./slider.js";
 
 const d = document;
 
@@ -26,7 +27,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     getVideo(".web-video");
     getLocalization(".latitud",".longitud",".precision");
     filterImages(".input-filter",e);  
-    elegirGanador(".btn-start");  
+    elegirGanador(".btn-start");
+    setSlider(".icon-prev",".icon-next",".slider");  
 })
 
 d.addEventListener("keydown", (e) =>{

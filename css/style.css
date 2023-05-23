@@ -96,6 +96,7 @@ a:not(.slider-container a){
 .open{
 
   top: 0;
+
 }
 
 .hamb{
@@ -270,7 +271,8 @@ a:not(.slider-container a){
 
 .secciones:nth-child(16){
 
-  background-color:hsl(342, 81%, 46%);
+  background-color:hsl(165, 82%, 13%);
+  color: #e7baeb;
   
   
   
@@ -550,43 +552,69 @@ form div{
 .slider-container{
 
   position: relative;
-  width: clamp(22rem, 9.6761rem + 52.5822vw, 40rem);
+  width: clamp(10rem, 9.6761rem + 52.5822vw, 30rem);
   height: 400px;
-  margin-top: .5em;
+  margin-top: 1em;
+ 
   
 }
-
-
 
 .slider{
   position: absolute;
-  opacity: 0;
-  transition: opacity 2s ease;
   
+  visibility: hidden;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: clip-path .2s ease;
+  inset: 0;
   
-  
- 
 }
 
 .slider img{
-
+  
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   
 }
 
 .slider.active-sld{
 
-  opacity: 1;
+  visibility: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 99%);
+  
 
 }
 
-.slider-btns a{
+.icon-prev, .icon-next{
 
-  bottom: 0;
-  position: absolute;
   color: #e2d8dc;
-  width: 5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #02081a71;
+  font-size: clamp(30px,3vw,40px);
+  border-style: none;
+  cursor: pointer;
+  
 }
+
+.slider-btns{
+  
+  position: absolute;
+  background-color: #ece5e800;
+  padding: 0 1.4em;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items:center;
+  opacity: 1;
+  height: 100%;
+  justify-content: space-between;
+  
+}
+
+
 
 
 
