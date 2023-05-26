@@ -274,11 +274,17 @@ a:not(.slider-container a){
   background-color:hsl(165, 82%, 13%);
   color: #e7baeb;
   
-  
-  
+}
+
+.secciones:nth-child(17){
+
+  background-color:hsl(253, 82%, 13%);
+  color: #e70a9e;
   
   
 }
+
+
 
 .hora{
 
@@ -612,6 +618,59 @@ form div{
   height: 100%;
   justify-content: space-between;
   
+}
+
+/****Intersection Observer*****/
+
+.galaxy-img{
+
+  width: clamp(300px ,70%, 600px);
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.galaxy-img.galaxy-active{
+
+  opacity:1
+}
+
+.intersection-container{
+
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 1.5em;
+padding-bottom: 4rem;
+}
+
+.universe-text{
+
+  
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: -100%;
+  transition: left 1s ease-in-out, opacity 1s ease;
+  
+  
+  
+}
+
+
+
+.universe-text.active-text{
+
+  left: 40%;
+  opacity: 1;
+}
+
+.change{
+
+  background-color: #570625!important;
+  color: white;
+
 }
 
 

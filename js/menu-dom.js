@@ -11,6 +11,7 @@ import { getLocalization } from "./geolocalization.js";
 import filterImages from "./filter.js";
 import elegirGanador from "./sorteo.js";
 import setSlider from "./slider.js";
+import setObserver from "./observer.js";
 
 const d = document;
 
@@ -28,7 +29,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     getLocalization(".latitud",".longitud",".precision");
     filterImages(".input-filter",e);  
     elegirGanador(".btn-start");
-    setSlider(".icon-prev",".icon-next",".slider");  
+    setSlider(".icon-prev",".icon-next",".slider");
+    setObserver();  
 })
 
 d.addEventListener("keydown", (e) =>{

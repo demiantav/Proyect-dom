@@ -2,9 +2,6 @@ const d = document;
 
 export function showButton(e,boton){
 
-    console.log(e);
-    console.log(window.scrollY);
-
     const $button = d.querySelector(boton);
 
     let scrollY= window.scrollY;
