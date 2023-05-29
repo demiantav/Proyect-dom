@@ -8,6 +8,7 @@
 html{
 
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body{
@@ -44,8 +45,9 @@ body{
 
 .menu{
   
-  height:100%;
+ 
   width:100%;
+  height: 100%;
   position:fixed;
   top: -100%;
   left: 0;
@@ -62,7 +64,7 @@ ul:not(.sorteo){
   list-style: none;
   flex-direction: column;
   background-color: rgb(22, 16, 50);
-  height: 100%;
+  height: auto;
   justify-content: center;
   
 
@@ -96,6 +98,7 @@ a:not(.slider-container a){
 .open{
 
   top: 0;
+  overflow: auto;
 
 }
 
@@ -168,7 +171,6 @@ a:not(.slider-container a){
   display: grid;
   place-items: center;
   background-color: rgb(206, 83, 116);
-  color: rgb(22, 16, 50);
   font-size: clamp(19px,4vw,32px);
   border-bottom: 1px solid rgb(22, 16, 50);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -283,6 +285,18 @@ a:not(.slider-container a){
   
   
 }
+
+.secciones:nth-child(18){
+
+  background-color:hsl(252, 79%, 4%);
+  color: hsl(54, 88%, 49%);
+  height: auto;
+ 
+  
+  
+}
+
+
 
 
 
@@ -632,17 +646,20 @@ form div{
 .galaxy-img.galaxy-active{
 
   opacity:1
+  
 }
 
 .intersection-container{
 
-position: relative;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 1.5em;
-padding-bottom: 4rem;
+ position: relative;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-top: 1.5em;
+ padding-bottom: 4rem;
+
 }
 
 .universe-text{
@@ -651,25 +668,166 @@ padding-bottom: 4rem;
   position: absolute;
   opacity: 0;
   bottom: 0;
-  left: -100%;
+  left: 90px;
   transition: left 1s ease-in-out, opacity 1s ease;
-  
-  
   
 }
 
 
-
-.universe-text.active-text{
+ .universe-text.active-text{
 
   left: 40%;
   opacity: 1;
+}
+
+@media (width < 600px){
+
+  .universe-text.active-text{
+
+    left: 30%;
+  }
 }
 
 .change{
 
   background-color: #570625!important;
   color: white;
+
+}
+
+
+/*****Formulario de contacto******/
+
+.form{
+
+  margin-top: 2rem;
+  
+}
+
+.container-form{
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+  color: #b3b09562;
+}
+
+.container-text-form{
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-validator{
+
+  
+  background-color: hsl(4, 81%, 46%);
+  color: white;
+  font-size: .9rem;
+  padding: .6rem;
+  display: none;
+  
+  
+
+}
+
+.name-validator.validator-active{
+
+  display:initial;
+  
+  
+ 
+}
+
+.form-input{
+  
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #e0d780;
+  color: #e0d780;
+  outline: none;
+  outline-color: #282828;
+  transition: outline-color 0.5s ease-out;
+  
+ 
+}
+
+
+
+.form-label{
+
+  font-size: .9rem;
+  position: absolute;
+  top: 0;
+  left: 4px;
+  transform: translateY(9px);
+  transition: transform .3s ease;
+  cursor: text;
+}
+
+#comentario{
+
+  background-color: #021852;
+  height: 16rem;
+  padding: .5rem;
+  border-color: #e0d780;
+  
+  
+
+}
+
+
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+
+  transform: translateY(-12px) scale(.7);
+  transform-origin: top left;
+  color: #e0d780;
+}
+
+.form-input:focus + .form-input,
+.form-input:not(:placeholder-shown) + .form-input{
+
+  outline: auto;
+  outline-width: 2px;
+  outline-color: #ff5500;
+}
+
+
+
+.form-btn{
+
+  width: 40%;
+  place-self: center;
+  margin-top: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  letter-spacing: .3rem;
+  background-color: #e0d780;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .4s ease;
+  transform: translateY();
+}
+
+.form-btn:hover{
+
+  background-color: #d1c238;
+  transform: translateY(4px);
+
+
+}
+
+.cont-form{
+
+ 
+  margin: 3rem 0 2rem;
+
 
 }
 

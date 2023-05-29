@@ -8,7 +8,7 @@ export default function setObserver(){
             entries.forEach(element => {
                 
                 if(element.isIntersecting){
-
+                    
                     d.querySelector(".galaxy-img").classList.add("galaxy-active");
                     d.querySelector(".universe-text").classList.add("active-text");
                     
@@ -27,7 +27,7 @@ export default function setObserver(){
     const options = {
 
         threshold: 0.9,
-    };
+    }
 
     const observer = new IntersectionObserver(callback, options);
     

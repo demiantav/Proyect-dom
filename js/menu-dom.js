@@ -12,6 +12,7 @@ import filterImages from "./filter.js";
 import elegirGanador from "./sorteo.js";
 import setSlider from "./slider.js";
 import setObserver from "./observer.js";
+import formValidator from "./form_validator.js";
 
 const d = document;
 
@@ -30,7 +31,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     filterImages(".input-filter",e);  
     elegirGanador(".btn-start");
     setSlider(".icon-prev",".icon-next",".slider");
-    setObserver();  
+    setObserver();
+    formValidator("#name",e);  
 })
 
 d.addEventListener("keydown", (e) =>{
