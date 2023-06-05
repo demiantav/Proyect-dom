@@ -38,6 +38,8 @@
         <li><a href="#13" class="seccion">14</a></li>
         <li><a href="#14" class="seccion">15</a></li>
         <li><a href="#15" class="seccion">16</a></li>
+        <li><a href="#16" class="seccion">17</a></li>
+        <li><a href="#17" class="seccion">18</a></li>
         
       </ul>
     </nav>
@@ -238,20 +240,23 @@
           <div class="container-form">
            
            <div class="container-text-form">
-             <input type="text" name="name" id="name" class="form-input" placeholder=" ">
+             <input type="text" name="name" id="name" class="form-input" placeholder=" " pattern="^[A-Za-z\s]*$" required>
              <label for="name" class="form-label">Nombre</label>
-             <span class="name-validator">Ingrese su nombre correctamente</span>
+             <span class="validator"></span>
            </div> 
             
             
             <div class="container-text-form">
-              <input type="email" name="mail" id="mail" class="form-input" placeholder=" ">
+              <input type="email" name="mail" id="mail" class="form-input" placeholder=" " pattern="^(([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?)*$" required>
               <label for="mail" class="form-label" >Email</label>
+              <span class="validator"></span>
+              
             </div>
             
             <div class="container-text-form">
-              <textarea name="comentario" id="comentario" class="form-input" placeholder=" " minlength="10" maxlength="3000"></textarea>
+              <textarea name="comentario" id="comentario" class="form-input" placeholder=" " pattern="^(([\S\s]){3,500})*$" required></textarea>
               <label for="comentario" class="form-label" >Escribe tu comentario</label>
+              <span class="validator"></span>
             </div>
             
             <button type="submit" class="form-btn">Enviar</button>

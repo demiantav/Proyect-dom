@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root{
+
+  --valid: green;
+  --focus: #e0d780;
+  --invalid: red;
+  --blur: gray;
+}
+
 html{
 
   scroll-behavior: smooth;
@@ -290,10 +298,7 @@ a:not(.slider-container a){
 
   background-color:hsl(252, 79%, 4%);
   color: hsl(54, 88%, 49%);
-  height: auto;
  
-  
-  
 }
 
 
@@ -447,12 +452,7 @@ form input{
 
 }
 
-form div{
 
-  flex-direction: row;
-  margin-top: .5em;
-
-}
 
 
 /**** Web cam detection *****/
@@ -698,18 +698,13 @@ form div{
 
 /*****Formulario de contacto******/
 
-.form{
-
-  margin-top: 2rem;
-  
-}
 
 .container-form{
   
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 2.5rem;
   color: #b3b09562;
+  margin-top: 2rem;
 }
 
 .container-text-form{
@@ -717,42 +712,77 @@ form div{
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin-bottom: 2rem;
+  
 }
 
-.name-validator{
+.validator{
 
   
   background-color: hsl(4, 81%, 46%);
   color: white;
   font-size: .9rem;
   padding: .6rem;
+  margin-top: .8rem;
   display: none;
   
   
 
 }
 
-.name-validator.validator-active{
+.validator.validator-active{
 
-  display:initial;
+  display: block;
   
-  
- 
+}
+
+.form-input:focus{
+
+  outline-offset: 3px;
 }
 
 .form-input{
   
   width: 100%;
   background-color: transparent;
-  border-bottom: 1px solid #e0d780;
+  border-bottom: 3.5px solid var(--color, --blur);
+  border-radius: 6px;
   color: #e0d780;
-  outline: none;
-  outline-color: #282828;
-  transition: outline-color 0.5s ease-out;
   
  
 }
+
+
+
+
+
+
+
+.container-text-form:has(:invalid){
+
+  --color: var(--invalid);
+
+}
+
+.container-text-form:has(:focus){
+
+  --color: var(--focus);
+
+}
+
+.container-text-form:has(:valid){
+
+  --color: var(--valid);
+
+}
+
+.container-text-form:has(:placeholder-shown){
+
+  --color: var(--blur);
+}
+
+
+
 
 
 
@@ -783,7 +813,7 @@ form div{
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label{
 
-  transform: translateY(-12px) scale(.7);
+  transform: translateY(-18px) scale(.7);
   transform-origin: top left;
   color: #e0d780;
 }
@@ -801,16 +831,17 @@ form div{
 .form-btn{
 
   width: 40%;
+  min-width: 110px;
   place-self: center;
   margin-top: 1rem;
-  padding: .5rem;
+  padding: .8rem;
   border-radius: .5rem;
   letter-spacing: .3rem;
   background-color: #e0d780;
   outline: none;
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: bolder;
   transition: all .4s ease;
   transform: translateY();
 }
@@ -823,13 +854,10 @@ form div{
 
 }
 
-.cont-form{
-
- 
-  margin: 3rem 0 2rem;
 
 
-}
+
+
 
 
 

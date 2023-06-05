@@ -32,7 +32,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     elegirGanador(".btn-start");
     setSlider(".icon-prev",".icon-next",".slider");
     setObserver();
-    formValidator("#name",e);  
+    formValidator("#name","#mail","#comentario",e);  
 })
 
 d.addEventListener("keydown", (e) =>{
