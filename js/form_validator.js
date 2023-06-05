@@ -79,4 +79,22 @@ export default function formValidator(name,mail,comentario){
 
 
     })
+
+    d.addEventListener("submit", (e) => {
+
+      const $loader= d.querySelector(".form-loader");
+      const $response= d.querySelector(".form-response");
+
+      e.preventDefault();
+     
+      $loader.classList.remove("none");
+
+      setTimeout(()=>{
+          
+        $loader.classList.add("none");
+        $response.classList.remove("none");
+        d.querySelector(".form").reset();
+
+      }, 5000)
+    })
 }

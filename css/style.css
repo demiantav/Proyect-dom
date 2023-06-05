@@ -298,6 +298,7 @@ a:not(.slider-container a){
 
   background-color:hsl(252, 79%, 4%);
   color: hsl(54, 88%, 49%);
+  height: auto;
  
 }
 
@@ -698,13 +699,31 @@ form input{
 
 /*****Formulario de contacto******/
 
+.cont-form{
+
+  margin-top: 2rem;
+  
+  
+}
+
+.form{
+
+  margin-top: 2rem;
+}
+
+.none{
+
+  display: none;
+}
 
 .container-form{
   
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
   color: #b3b09562;
-  margin-top: 2rem;
+  
+ 
 }
 
 .container-text-form{
@@ -830,10 +849,12 @@ form input{
 
 .form-btn{
 
-  width: 40%;
-  min-width: 110px;
+  width: 50%;
+  min-width: 100px;
   place-self: center;
+  display: block;
   margin-top: 1rem;
+  margin-bottom: 2.3rem;
   padding: .8rem;
   border-radius: .5rem;
   letter-spacing: .3rem;
@@ -852,6 +873,17 @@ form input{
   transform: translateY(4px);
 
 
+}
+
+.form-loader, .form-response{
+
+  margin-bottom: 4rem;
+}
+
+.form-response{
+
+  color: #ffe600;
+  font-size: 1.2rem;
 }
 
 
