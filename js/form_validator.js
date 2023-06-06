@@ -18,7 +18,7 @@ export default function formValidator(name,mail,comentario){
         if(e.target.matches(name)){
             
             
-            if($name.pattern.test(e.target.value)){
+            if(regex1.test(e.target.value)){
 
                 $name_validator[0].classList.remove("validator-active");
                 
@@ -79,13 +79,14 @@ export default function formValidator(name,mail,comentario){
 
 
     })
-
+    
+    /***Simulacion de envio de formulario */
     d.addEventListener("submit", (e) => {
 
       const $loader= d.querySelector(".form-loader");
       const $response= d.querySelector(".form-response");
 
-      e.preventDefault();
+      
      
       $loader.classList.remove("none");
 
