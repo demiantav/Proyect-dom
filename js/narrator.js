@@ -40,6 +40,7 @@ export default function textSpeech(opciones,texto,btn){
         if(e.target.matches(btn)){
 
             const textToRead = new SpeechSynthesisUtterance($texto.value);
+           
 
             const voiceSelected = $opciones.selectedOptions[0].getAttribute("data-name");
 
@@ -48,6 +49,7 @@ export default function textSpeech(opciones,texto,btn){
                 if(voice.name === voiceSelected){
 
                     textToRead.voice= voice;
+                    textToRead.lang= voice.lang;
 
                 }
             })
