@@ -200,6 +200,7 @@ a:not(.slider-container a){
   padding: 1rem;
   
 }
+/*Secciones*/
 
 .secciones:nth-child(7){
 
@@ -299,6 +300,14 @@ a:not(.slider-container a){
   background-color:hsl(252, 79%, 4%);
   color: hsl(54, 88%, 49%);
   height: auto;
+ 
+}
+
+.secciones:nth-child(19){
+
+  background-color:#FFFFC7;
+  color: #473335;
+ 
  
 }
 
@@ -669,7 +678,7 @@ form input{
   position: absolute;
   opacity: 0;
   bottom: 0;
-  left: 90px;
+  left: -90px;
   transition: left 1s ease-in-out, opacity 1s ease;
   
 }
@@ -884,6 +893,61 @@ form input{
 
   color: #ffe600;
   font-size: 1.2rem;
+}
+
+
+/*Narrador (Web Speech Api)*/
+
+.container-narrador{
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.container-narrador *{
+   
+  margin-bottom: 30px;
+}
+
+[id='18'] em{
+
+  font-size: .5em;
+
+
+}
+
+.voices{
+
+  padding: .4rem;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.text-to-read{
+
+  background-color: transparent;
+  padding: .5rem;
+}
+
+.btn-speech{
+
+  width: 50%;
+  min-width: 100px;
+  place-self: center;
+  cursor: pointer;
+  padding: .3rem;
+  font-weight: bolder;
+  transition: all .2s ease;
+  letter-spacing: .2rem;
+
+
+}
+
+.btn-speech:hover{
+
+  background-color: hsl(181, 23%, 43%);
+  color: #EDF2F4;
 }
 
 

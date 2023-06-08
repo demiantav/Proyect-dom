@@ -13,6 +13,7 @@ import elegirGanador from "./sorteo.js";
 import setSlider from "./slider.js";
 import setObserver from "./observer.js";
 import formValidator from "./form_validator.js";
+import textSpeech from "./narrator.js";
 
 const d = document;
 
@@ -32,7 +33,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     elegirGanador(".btn-start");
     setSlider(".icon-prev",".icon-next",".slider");
     setObserver();
-    formValidator("#name","#mail","#comentario",e);  
+    formValidator("#name","#mail","#comentario",e);
+    textSpeech(".voices",".text-to-read",".btn-speech");  
 })
 
 d.addEventListener("keydown", (e) =>{
