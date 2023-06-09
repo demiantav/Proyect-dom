@@ -35,6 +35,7 @@ export default function textSpeech(opciones,texto,btn){
         speechSynthesis.onvoiceschanged = voicesList;
     }
 
+    
     d.addEventListener("click", e => {
 
         if(e.target.matches(btn)){
@@ -42,7 +43,7 @@ export default function textSpeech(opciones,texto,btn){
             const textToRead = new SpeechSynthesisUtterance($texto.value);
            
 
-            const voiceSelected = $opciones.selectedOptions[0].getAttribute("data-name");
+            const voiceSelected = $opciones.selectedOptions[0].getAttribute("data-name")
 
             voices.forEach((voice) => {
 
