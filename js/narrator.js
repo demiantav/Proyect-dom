@@ -8,8 +8,7 @@ export default function textSpeech(opciones,texto,btn){
           
     let voices = [];
     
-    /*La siguiente funcion nos guarda la lista de voces y las añade dinamicamente a un elemento de tipo select*/
-
+    /*Funcion para guardar la lista de voces y añadirlas dinamicamente a un elemento de tipo select ubicado en el DOM*/
     const voicesList = () => {
 
         voices= synth.getVoices();
@@ -22,28 +21,16 @@ export default function textSpeech(opciones,texto,btn){
             option.setAttribute("data-name", voice.name);
 
             $opciones.appendChild(option);
+
+
         }
-
-
     }
-
-    voicesList();
-   
-    /*Como la lista de voces no se encuentra cargada debemos ejecutar la siguiente linea de codigo para evitar un error*/
     
-    if (speechSynthesis.onvoiceschanged !== undefined) {
-        speechSynthesis.onvoiceschanged = voicesList;
-    }
-
-    
-    d.addEventListener("click", e => {
-
-        if(e.target.matches(btn)){
-
-            const textToRead = new SpeechSynthesisUtterance($texto.value);
-           
-
-            const voiceSelected = $opciones.selectedOptions[0].getAttribute("data-name")
+    //Funcion para seleccionar y ejecutar la voz elegida
+    const playVoice = () => {
+        
+        const textToRead = new SpeechSynthesisUtterance($texto.value);
+        const voiceSelected = $opciones.selectedOptions[0].getAttribute("data-name");
 
             voices.forEach((voice) => {
 
@@ -57,11 +44,26 @@ export default function textSpeech(opciones,texto,btn){
 
             synth.speak(textToRead);
 
-            
 
-           
+    }
+
+    /*Como la lista de voces no se encuentra cargada debemos ejecutar la siguiente linea de codigo para evitar un error*/
+    
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = voicesList;
+    }
+
+    // Ejecutamos las funciones al hacer click en el boton
+    d.addEventListener("click", e => {
+
+        if(e.target.matches(btn)){
+            
+            voicesList();
+            playVoice();
+
         }
     })
+
 
     
         
