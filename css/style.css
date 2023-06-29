@@ -591,7 +591,6 @@ form input{
 
 .slider{
   position: absolute;
-  
   visibility: hidden;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: clip-path .2s ease;

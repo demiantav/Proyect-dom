@@ -6,8 +6,6 @@ export function showButton(e,boton){
 
     let scrollY= window.scrollY;
 
-    console.log(scrollY);
-
     if(scrollY > 3400){
 
         $button.style.opacity = "1";
