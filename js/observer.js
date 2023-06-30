@@ -11,7 +11,16 @@ export default function setObserver(){
                 
                 const observado = element.target.querySelector(".observe");
 
-                observado.classList.toggle("intersection-active",element.isIntersecting);
+                if(element.isIntersecting){
+
+                    observado.classList.add("intersection-active");
+                    observer.unobserve(element.target);
+
+                } else {
+
+                    observado.classList.remove("intersection-active");
+                
+                }
                 
             });
 
