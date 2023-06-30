@@ -1,43 +1,38 @@
 export default function setObserver(){
 
     const d = document,
-          $elemento = d.querySelector("[id='16']");
+          $elementos = d.querySelectorAll("[data-observe]");
 
-    
-    
-    
+          
+
     const callback = (entries, observer) => {
                    
             entries.forEach(element => {
                 
-                if(element.isIntersecting){
-                    
-                   
-                    d.querySelector(".galaxy-img").classList.add("galaxy-active");
-                    d.querySelector(".universe-text").classList.add("active-text");
-                    observer.unobserve(element.target);
+                const observado = element.target.querySelector(".observe");
 
-                    
-                } else {
-                    
-                    d.querySelector(".galaxy-img").classList.remove("galaxy-active");
-                    d.querySelector(".universe-text").classList.remove("active-text");
-
-                }
-
+                observado.classList.toggle("intersection-active",element.isIntersecting);
+                
             });
 
     }
 
     const options = {
-
-        threshold: 0.9,
+       
+        rootMargin: "0px",
+        threshold: 0.5,
     
     }
     
     const observer = new IntersectionObserver(callback, options);
+
+      $elementos.forEach( element => {
+
+         observer.observe(element);
         
-    observer.observe($elemento);
+      })
+        
+    
 
    
     
